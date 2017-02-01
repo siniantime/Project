@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<title>无标题文档</title>
+	<link rel="shortcut icon" href="img/icoTest.ico">
+</head>
+<style type="text/css">
+	/*公共样式*/
+	ul,li,div{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style: none;
+	}
+	.floatLeft{
+		float: left;
+	}
+	.floatRight{
+		float: right;
+	}
+	/*方法一：设置overflow清除浮动（同理可设置父级元素高度）*/
+	/*
+	.overFlow{
+		overflow: auto;
+		zoom:1;//处理兼容性
+	}
+	*/
+
+	/*方法二：添加元素清除浮动*/
+	/*
+	.floatClear{
+		clear: both;
+	}
+	*/
+
+	/*方法三：通过伪类*/
+	.container{zoom: 1;}/*处理兼容性问题*/
+	.container :after{
+		display: block;
+		clear: both;
+		width: 0;
+		height: 0;
+		content: "";
+		visibility: hidden;
+	}
+	/*样式*/
+	.container{
+		position: relative;
+		width: 302px;
+		height: 500px;
+		margin: auto;
+	}
+	.container .nav{
+		width:212px;
+	}
+
+	.container .nav li{
+		width: 90px;
+		height: 30px;
+		border: 1px solid #ccc;
+	}
+	
+	.content{
+		z-index: 1;
+		width: 210px;
+		height: 300px;
+		border: 1px solid #ccc;
+	}
+</style>
+<body>
+	<div class="container">
+		<ul class="nav overFlow">
+			<li class="floatLeft"></li>
+			<li class="floatRight"></li>
+		</ul>
+		<!--方法二：清除浮动-->
+		<!--
+		<div class="floatClear"></div>
+		-->
+		<div class="content"></div>
+	</div>
+</body>
+<html>

@@ -1,0 +1,61 @@
+html,body,h1,h2,p,div,ul,li{padding: 0;margin: 0}
+body{
+	background-color: #fff;
+	font-family: 'Microsoft YaHei';
+	text-align: center;
+}
+#page1{
+	background: url(img/hero_sunset_large_2x.jpg) no-repeat center;
+	background-size: cover;
+	color: #DDD9D8;
+}
+#page1 h1{
+	font-size: 50px;
+
+}
+#page1 p{
+	margin: auto;
+	width: 60%;
+}
+#page2{
+	background: #f2f2f2 url(img/technology_hero_large_2x.jpg) no-repeat bottom;
+	background-size: 100%;
+}
+#page3{
+	background: url(img/timekeeping_hero_large_2x.jpg) no-repeat;
+	background-position: center 200px;
+	background-size: 50%;
+}
+#page3 h2{
+	margin: 2% auto;
+}
+#page3 p{
+	margin: auto;
+	width: 60%;
+}
+#page3 a{
+	margin:3% auto;
+	display: block;
+}
+#page3 img{
+	width: 50%;
+	display: block;
+	margin: 0 auto;
+}
+#page4 ul{
+	margin: auto;
+	height: 60%;
+	padding: 0% 0.5%;
+}
+#page4 li{
+	list-style: none;
+	margin: 1.5%;
+	width: 30%;
+	background-color: #F2F2F2;
+	float: left;
+	display: block;
+	height: 100%;
+}
+#page4 img{
+	width: 30%;
+}
