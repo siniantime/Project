@@ -1,61 +1,359 @@
-html,body,h1,h2,p,div,ul,li{padding: 0;margin: 0}
+/*公共样式*/
+html,body,h1,h2,p,div,ul,li,hr{padding: 0;margin: 0}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.container{
+	width: 960px;
+	margin: auto;
+}
+.gradient{
+	background: -webkit-linear-gradient(top,#fff,#f5f5f5);/*Safari chrome*/
+    background: -o-linear-gradient(top,#fff,#f5f5f5);/*Opera*/
+    background: -moz-linear-gradient(top,#fff,#f5f5f5);/*Firefox*/
+    background: -ms-linear-gradient(top,#fff,#f5f5f5);/*ie10+*/
+    background: linear-gradient(top,#fff,#f5f5f5);/*标准*/
+    -ms-filter:"progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#fff, endColorstr=#f5f5f5)";
++background:#FF7800;/*ie9-*/
+}
+/*浮动*/
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+.section{
+	border: 1px solid #e5e5e5;
+	border-radius: 6px;
+}
+
+/*字体样式*/
 body{
-	background-color: #fff;
-	font-family: 'Microsoft YaHei';
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+}
+
+/*头部*/
+.head a{
+	color: #999;
+}
+.head .city .native{
+	color: #d60d03;
+}
+
+/*导航*/
+#nav a{
+	color: #333333;
+}
+/*私有样式*/
+/*头部链接*/
+.head{
+	width: 960px;
+	height: 30px;
+}
+.head p{
+	padding-left: 20px;
+	padding-right: 16px;
+	line-height: 30px;
+}
+.head .city{
+	margin-top: 4px;
+}
+.head .city li{
+	float: left;
+	width: 39px;
+	height: 18px;
+	margin-right: 9px;
 	text-align: center;
+	line-height: 18px;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	box-shadow: 1px 1px #f0f0f0;
 }
-#page1{
-	background: url(img/hero_sunset_large_2x.jpg) no-repeat center;
-	background-size: cover;
-	color: #DDD9D8;
+.head .link{
+	padding-right:30px; 
 }
-#page1 h1{
-	font-size: 50px;
+.head .link li{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+}
+.head .link li:first-child{
+	padding-left: 21px;
+	background-image: url('../img/header_link_bg.gif');
+	background-repeat: no-repeat;
+	background-position:0 8px;
+}
+.head .link li:last-child{
+	padding-left: 21px;
+	background-image: url('../img/header_link_bg.gif');
+	background-repeat: no-repeat;
+	background-position:0 -22px;
+}
+
+/*导航栏*/
+#nav{
+	width: 960px;
+	height: 100px;
+	margin-bottom: 10px;
+	padding:10px 15px 0 10px;
+}
+#nav li{
+	float: left;
+	width: 66px;
+	padding-top: 51px;
+	text-align: center; 
+	background-image: url('../img/nav_bg.png');
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+#nav .left .bg0{
+	background-position: 0px 0px;
+}
+#nav .left .bg1{
+	background-position: -66px 0px;
+}
+#nav .left .bg2{
+	background-position: -132px 0px;
+}
+#nav .left .bg3{
+	background-position: -198px 0px;
+}
+#nav .left .bg4{
+	background-position: -266px 0px;
+}
+#nav .left .bg0:hover{
+	background-position: 0px -70px;
+}
+#nav .left .bg1:hover{
+	background-position: -66px -70px;
+}
+#nav .left .bg2:hover{
+	background-position: -132px -70px;
+}
+#nav .left .bg3:hover{
+	background-position: -199px -70px;
+}
+#nav .left .bg4:hover{
+	background-position: -265px -70px;
+}
+#nav .logo{
+	width: 223px;
+	height: 62px;
+	margin-left: 32px;
+	background-image: url('../img/logo.png');
+}
+#nav .right .bg0{
+	background-position: -330px 0px;
+}
+#nav .right .bg1{
+	background-position: -396px 0px;
+}
+#nav .right .bg2{
+	background-position: -462px 0px;
+}
+#nav .right .bg3{
+	background-position: -528px 0px;
+}
+#nav .right .bg4{
+	background-position: -594px 0px;
+}
+#nav .right .bg0:hover{
+	background-position: -330px -70px;
+}
+#nav .right .bg1:hover{
+	background-position: -396px -70px;
+}
+#nav .right .bg2:hover{
+	background-position: -462px -70px;
+}
+#nav .right .bg3:hover{
+	background-position: -528px -70px;
+}
+#nav .right .bg4:hover{
+	background-position: -594px -70px;
+}
+
+/*搜索栏*/
+.search{
+	position: relative;
+	margin-bottom: 11px;
+	width: 958px;
+	height: 114px;
+	overflow: visible;
+}
+.search ul{
+	position: absolute;
+	top: -10px;
+	left: 228px;
 
 }
-#page1 p{
-	margin: auto;
-	width: 60%;
-}
-#page2{
-	background: #f2f2f2 url(img/technology_hero_large_2x.jpg) no-repeat bottom;
-	background-size: 100%;
-}
-#page3{
-	background: url(img/timekeeping_hero_large_2x.jpg) no-repeat;
-	background-position: center 200px;
-	background-size: 50%;
-}
-#page3 h2{
-	margin: 2% auto;
-}
-#page3 p{
-	margin: auto;
-	width: 60%;
-}
-#page3 a{
-	margin:3% auto;
-	display: block;
-}
-#page3 img{
-	width: 50%;
-	display: block;
-	margin: 0 auto;
-}
-#page4 ul{
-	margin: auto;
-	height: 60%;
-	padding: 0% 0.5%;
-}
-#page4 li{
-	list-style: none;
-	margin: 1.5%;
-	width: 30%;
-	background-color: #F2F2F2;
+.search ul li{
 	float: left;
-	display: block;
-	height: 100%;
+	width: 78px;
+	height: 25px;
+	margin-right: 1px;
+	text-align: center;
+	line-height: 25px;
+	border: 1px solid #f8d0bf;
+	border-radius: 6px 6px 0 0;
+	cursor: pointer;
 }
-#page4 img{
-	width: 30%;
+
+.search .content{
+	position: absolute;
+	top: 16px;
+	width: 958px;
+	height: 66px;
+	background-color: #e21c01;
+}
+.search .content form input:first-child{
+	position: absolute;
+	top: 20px;
+	left: 228px;
+	width: 405px;
+	height: 22px;
+}
+.search .content form input:last-child{
+	position: absolute;
+	top: 20px;
+	left: 645px;
+	width: 64px;
+	height: 27px;
+	border: none;
+	outline: none;
+	background-color: rgba(0,0,0,0);
+	background-image: url('../img/search_img.png');
+	background-position: -161px 0px;
+}
+.search .content p{
+	position: absolute;
+	top: 15px;
+	right:27px;
+}
+.main{
+	width: 713px;
+}
+.main .video{
+	width: 320px;
+	height: 421px;
+	padding:0px 16px;
+	
+}
+.main .video p{
+	width: 130px;
+	font-size: 16px;
+	line-height: 42px;
+	color: #d90000;
+	background-image: url('../img/video_bg.gif');
+	background-repeat: no-repeat;
+	background-position: 104px 8px;
+}
+.main .video video{
+	width: 318px;
+	height: 285px;
+	background-image: url('../img/play_bg.gif');
+	background-repeat: no-repeat;
+}
+.main .video ul{
+	height: 63px;
+	margin:11px 0 16px;
+	padding-left: 84px;
+	background-image: url('../img/video_bg.gif');
+	background-repeat: no-repeat;
+	background-position: 0 -47px;
+}
+.main .video ul li{
+	padding-left: 5px;
+	color: #4d4d4d;
+	background-image: url('../img/dot.gif');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+/*shop*/
+.main .shop{
+	position: relative;
+	width: 350px;
+}
+.main .shop .menu{
+	height: 36px;
+}
+.main .shop .menu li{
+	float: left;
+	width: 172px;
+	height: 35px;
+	text-align: center;
+	line-height: 34px;
+	color: #cc0d13;
+	border: 1px solid #e5e5e5;
+	border-bottom: none;
+	border-radius: 6px 6px 0 0;
+}
+.main .shop .menu li:first-child{
+	margin-right: 2px;
+}
+.main .shop hr{
+	position: absolute;
+	z-index: 2;
+	top: 36px;
+	left: 1px;
+	width: 172px;
+	height: 1px;
+	border: 0;
+	background-color: #fff;
+
+}
+.main .shop .content{
+	position: relative;
+	z-index: 1;
+	padding: 16px 16px 14px;
+	border: 1px solid #e5e5e5;
+	border-radius:0 0 6px 6px;
+}
+.main .shop .content li{
+	position: relative;
+	width: 318px;
+	height: 100px;
+	padding-bottom: 14px;
+	background-image: url('../img/hot_list_li_bg.gif');
+	background-repeat: no-repeat;
+}
+.main .shop .content p{
+	padding-top: 16px;
+	padding-left: 128px;
+	color: #4d4d4d;
+}
+.main .shop .content li img{
+	position: absolute;
+	top: 11px;
+}
+.main .shop .content .ewShop {
+	display: none;
+}
+/*banner*/
+.main .banner{
+	display: inline-block;
+	width: 710px;
+	height: 90px;
+	margin:10px 0;
+	background-image: url('../img/ad/ad1.jpg');
+	border-radius: 6px;
+}
+.sidebar{
+	 width: 241px;
+	 height: 10px;
+	 background-color: #bbb;
+}
+.footer{
+	width: 960px;
+	height: 81px;
+	background-color: #111;
 }
